@@ -1,0 +1,22 @@
+<div id='signup-container'>
+  <form action='/auth/signup' method='POST'>
+    <label class='formLabel' for='firstName'>first name:</label>
+    <input class='formInput' id='firstName' name='firstName' type='text' required>
+
+    <label class='formLabel' for='lastName'>last name:</label>
+    <input class='formInput' id='lastName' name='lastName' type='text' required>
+
+    <label class='formLabel' for='email'>email addres:</label>
+    <input class='formInput' id='email' name='email' type='email' required>
+
+    <label class='formLabel' for='password'>password:</label>
+    <input class='formInput' id='password' name='password' type='password' required>
+
+    <label class='formLabel' for='c_password'>confirm password:</label>
+    <input class='formInput' id='c_password' name='c_password' type='password' required>
+
+    <button type='submit'>Sign Up</button>
+  </form>
+
+  <p>Already have an account? <a href='/auth/login'>Login</a></p>
+</div>
