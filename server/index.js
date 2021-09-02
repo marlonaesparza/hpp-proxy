@@ -22,7 +22,7 @@ app.use('/auth', authRouter);
 app.use('/home', homeRouter);
 
 app.get('/', (req, res) => {
-  return axios.get('http://localhost:8001/home', {
+  return axios.get('http://localhost:8001/auth', {
     params: {
       session: req.cookies.hpp_session
     }

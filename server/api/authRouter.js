@@ -4,6 +4,11 @@ const authRouter = express.Router();
 //--SIGN UP FUNCTIONALITY--//
 
 authRouter.get('/signup', (req, res) => {
+  // return axios.get('http://localhost:8001/home', {
+  //   params: {
+  //     session: req.cookies.hpp_session
+  //   }
+  // });
   res.render('pages/signup');
 });
 
