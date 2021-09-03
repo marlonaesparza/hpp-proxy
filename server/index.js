@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 const partials = require('express-partials');
 
 const indexRouter = require('./api/indexRouter');
-const authRouter = require('./api/authRouter');
+const signupRouter = require('./api/signupRouter');
+const loginRouter = require('./api/loginRouter');
 const homeRouter = require('./api/homeRouter');
 
 const app = express();
@@ -19,7 +20,8 @@ app.set('view engine', 'ejs');
 app.use(partials());
 
 app.use('/', indexRouter);
-app.use('/auth', authRouter);
+app.use('/signup', signupRouter);
+app.use('/login', loginRouter);
 app.use('/home', homeRouter);
 
 app.listen(port, () => {

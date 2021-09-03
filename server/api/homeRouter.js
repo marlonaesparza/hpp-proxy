@@ -6,7 +6,7 @@ homeRouter.get('/', (req, res) => {
   let firstName = 'Marlon';
   let lastName = 'Esparza';
 
-  res.render('pages/index', {
+  return res.render('pages/home', {
     firstName,
     lastName
   });

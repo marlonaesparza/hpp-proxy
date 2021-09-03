@@ -1,9 +1,9 @@
 const express = require('express');
 const axios = require('axios');
 
-const indexRouter = express.Router();
+const signupRouter = express.Router();
 
-indexRouter.get('/', (req, res) => {
+signupRouter.get('/', (req, res) => {
   return axios.get('http://localhost:8001/auth', {
     params: {
       session: req.cookies.hpp_session
@@ -14,8 +14,8 @@ indexRouter.get('/', (req, res) => {
 
     if (!session.userUUID) {
       res.cookie('hpp_session', session);
-      return res.redirect('/login');
-    };
+      return res.render('pages/signup');
+    }
     
     return res.redirect('/home');
   })
@@ -26,4 +26,9 @@ indexRouter.get('/', (req, res) => {
   })
 });
 
-module.exports = indexRouter;
+signupRouter.post('/register', (req, res) => {
+  console.log(req.body);
+  res.end();
+});
+
+module.exports = signupRouter;
