@@ -27,8 +27,39 @@ signupRouter.get('/', (req, res) => {
 });
 
 signupRouter.post('/register', (req, res) => {
-  console.log(req.body);
-  res.end();
+  let { firstName, lastName, email, password } = req.body;
+  let { hash } = req.cookies.hpp_session;
+  let userUUID;
+
+  return axios.post('http://localhost:8002/user/register', {
+    firstName,
+    lastName,
+    email,
+    password
+  })
+    .then(({ data }) => {
+      let { uuid } = data;
+      userUUID = uuid;
+      
+      return axios.patch('http://localhost:8001/session/updateSession', {
+        uuid,
+        hash
+      });
+    })
+    .then(({ data }) => {
+      let { updated } = data;
+
+      if (!updated) {
+        throw updated;
+      };
+
+      req.cookies.hpp_session.userUUID = userUUID;
+
+      return res.redirect('/home');
+    })
+    .catch(() => {
+      return res.redirect('/signup');
+    });
 });
 
 module.exports = signupRouter;
