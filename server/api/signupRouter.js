@@ -54,7 +54,6 @@ signupRouter.post('/register', (req, res) => {
       };
 
       req.cookies.hpp_session.userUUID = userUUID;
-
       return res.redirect('/home');
     })
     .catch(() => {
