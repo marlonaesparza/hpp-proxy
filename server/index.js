@@ -18,6 +18,7 @@ app.use(express.json());
 
 app.set('view engine', 'ejs');
 app.use(partials());
+app.use(express.static(__dirname + '/../public'));
 
 app.use('/', indexRouter);
 app.use('/signup', signupRouter);
