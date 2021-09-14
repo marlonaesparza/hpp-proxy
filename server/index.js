@@ -8,6 +8,7 @@ const indexRouter = require('./api/indexRouter');
 const signupRouter = require('./api/signupRouter');
 const loginRouter = require('./api/loginRouter');
 const homeRouter = require('./api/homeRouter');
+const postRouter = require('./api/postRouter');
 
 const app = express();
 const port = 8000;
@@ -24,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
 app.use('/home', homeRouter);
+app.use('/post', postRouter);
 
 app.listen(port, () => {
   console.log(`Listening to port: ${port}`);
