@@ -1,9 +1,9 @@
-body, p {
+body {
   margin: 0;
   padding: 0;
 }
 
-main {
+#home-container {
   display: grid;
   grid-template-columns: 2fr 10fr;
 }
@@ -13,9 +13,4 @@ main {
   padding: 0;
   display: grid;
   grid-template-columns: 10fr 2fr;
-}
-
-#feed-controls {
-  margin: 0;
-  padding: 5px;
 }

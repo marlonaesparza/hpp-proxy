@@ -1,0 +1,8 @@
+#feed-controls {
+  margin: 0;
+  padding: 5px;
+}
+
+#post-control:hover {
+  cursor: pointer;
+}
