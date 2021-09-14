@@ -1,8 +1,33 @@
 <head>
   <link rel='stylesheet' type='text/css' href='styles/home.css'>
+  <link rel='stylesheet' type='text/css' href='styles/header.css'>
+  <link rel='stylesheet' type='text/css' href='styles/nav.css'>
+  <link rel='stylesheet' type='text/css' href='styles/feedView.css'>
 </head>
 <body>
-  <div id='home-container'>
-    <p>Welcome.</p>
-  </div>
+  <%- include('../partials/header'); %>
+
+  <main id='home-container'>
+
+    <%- include('../partials/nav'); %>
+
+    <section id='feed'>
+      <!-- 
+        Do to:
+        Input dynamic data
+       -->
+      <%- include('../partials/feedView', {
+        posts: [{
+          createdBy: 'jim bean',
+          text: 'Where does the day go?',
+          media: '/devData/profilePic.jpg',
+          createdAt: '5 Sec ago'
+        }]
+      }); %>
+
+      <div id='feed-controls'>
+        [ Feed Controls ]
+      </div>
+    </section>
+  </main>
 </body>

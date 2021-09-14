@@ -1,0 +1,33 @@
+<div id='feed-view'>
+  <!--
+    Hard coded post.
+    Update for dynamic rendering.
+  -->
+  <% for(let i = 0; i < posts.length; i++) { %>
+      <article class='feed-post'>
+        <div class='p-owner-photo'>
+          <img class='p-photo' alt='owner profile photo' src=<%= posts[i].media %>>
+        </div>
+        <div class='p-contents'>
+          <div class='p-meta'>
+            <p class='meta p-owner'><%= posts[i].createdBy.split('').reduce((n, l, i) => {
+              if (i === 0) {
+                l = l.toUpperCase();
+              };
+
+              return n + l;
+            }, '') %></p>
+            <p class='meta p-timestamp'><%= posts[i].createdAt %></p>
+          </div>
+          <div class='p-msg-box'>
+            <p class='p-msg-txt'>
+              <%= posts[i].text %>
+            </p>
+          </div>
+        </div>
+      </article>
+  <% } %>
+  <!-- 
+    End of hard coded post.
+   -->
+</div>
