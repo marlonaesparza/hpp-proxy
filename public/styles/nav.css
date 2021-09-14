@@ -9,3 +9,7 @@ ul {
   padding: 5px;
   list-style: none;
 }
+
+li:hover {
+ cursor: pointer;
+}

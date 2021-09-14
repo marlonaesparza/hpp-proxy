@@ -3,7 +3,11 @@
   <link rel='stylesheet' type='text/css' href='styles/header.css'>
   <link rel='stylesheet' type='text/css' href='styles/nav.css'>
   <link rel='stylesheet' type='text/css' href='styles/feedView.css'>
+  <link rel='stylesheet' type='text/css' href='styles/feedControls.css'>
+  <link rel='stylesheet' type='text/css' href='styles/postForm.css'>
 </head>
+
+
 <body>
   <%- include('../partials/header'); %>
 
@@ -25,9 +29,9 @@
         }]
       }); %>
 
-      <div id='feed-controls'>
-        [ Feed Controls ]
-      </div>
+      <%- include('../partials/postForm'); %>
+
+      <%- include('../partials/feedControls'); %>
     </section>
   </main>
 </body>
