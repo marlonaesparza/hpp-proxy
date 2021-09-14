@@ -1,0 +1,11 @@
+nav {
+  margin: 0;
+  padding: 0;
+  border-right: 2px solid black;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
