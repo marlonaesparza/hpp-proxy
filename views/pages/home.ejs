@@ -6,13 +6,10 @@
   <link rel='stylesheet' type='text/css' href='styles/feedControls.css'>
   <link rel='stylesheet' type='text/css' href='styles/postForm.css'>
 </head>
-
-
 <body>
   <%- include('../partials/header'); %>
 
   <main id='home-container'>
-
     <%- include('../partials/nav'); %>
 
     <section id='feed'>
@@ -24,14 +21,15 @@
         posts: [{
           createdBy: 'jim bean',
           text: 'Where does the day go?',
-          media: '/devData/profilePic.jpg',
+          media: '/devData/profilePics/profilePic.jpg',
           createdAt: '5 Sec ago'
         }]
       }); %>
-
+      
       <%- include('../partials/postForm'); %>
-
       <%- include('../partials/feedControls'); %>
     </section>
   </main>
+
+  <script src='./scripts/feedControls.js'></script>
 </body>

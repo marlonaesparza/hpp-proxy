@@ -22,7 +22,7 @@ homeRouter.get('/', (req, res) => {
   //   res.cookie('hpp_session', session);
   //   return res.redirect('/login');
   // });
-  res.render('pages/home');
+  return res.render('pages/home');
 });
 
 module.exports = homeRouter;

@@ -1,13 +1,13 @@
-<div id='post-form-box'>
-  <p>Create a post.</p>
-
+<div id='post-form-box' class='hidden'>
   <form id='post-form' action='/post/createPost' method='POST' enctype='multipart/form-data'>
     <label for='text' class='form-label'>Text:</label>
-    <input id='text' name='text' type='text' minlength='1' maxlength='255' size='255'>
-  
+    <br>
+    <textarea id='text' name='text' type='text' minlength='1' maxlength='255'></textarea>
+    <br>
     <label for='media' class='form-label'>Media:</label>
+    <br>
     <input id='media' name='media' type='file' accept='image/*,video/*,audio/*'>
-  
+    <br>
     <input type='submit' value='post'>
   </form>
 </div>
