@@ -23,6 +23,7 @@ loginRouter.get('/', (req, res) => {
     // TODO:
     // 1. Provide a better error experience.
     console.log(error);
+    return res.render('pages/login');
   });
 });
 
